@@ -1,0 +1,35 @@
+main {
+    max-width:  80%;
+}
+
+aside {
+    width: 15rem;
+    margin: 5rem;
+    border: 10px slateblue;
+    padding: 2rem;
+    background-color: darkslateblue;
+    color: cadetblue;
+    text-align: center;
+}
+
+aside img {
+    width: 200px;
+    height: auto;
+    image-orientation: flip;
+}
+
+main img {
+    width: 250px;
+    height: auto;
+}
+
+p {
+    padding: 0;
+}
+
+footer {
+    margin-top: 2rem;
+    border-top: 20px;
+    text-align: center;
+    background-color: burlywood;
+}

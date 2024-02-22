@@ -1,0 +1,828 @@
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="An introduction to Web Fundamentals, in partial fulfillment of Software Development Degree. This is a demo site">
+        <meta name="author" content="Benson Arosam">
+        <title>Benson Arosam | WDD 130</title>
+        <link href="styles/styles.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="#">Home</a>
+                <a href="wwr/">Rafting Website</a>
+                <a href="wwr/site-plan-rafting.html">Rafting Site Plan</a>
+                <a href="https://linkedin.com/in/arosam-benson" target="_blank">linkedin</a>
+                <a href="https://facebook.com" target="_blank">facebook</a>
+            </nav>
+        </header>
+
+        <div class="grid">
+            <main>
+                <h1>Benson Arosam | WDD 130</h1>
+                <img src="images/profile.jpg" alt="Benson's profile picture" width="200">
+
+                <p>Arosam Benson is a budding software developer and student of BYU-Idaho. He is a writer of creative ideas and content for blogs. He has been writing professionally for six years with expertise in the tech and finance industry, He writes blogs, and headline articles for top magazines.</p>
+
+                <ul class="box">
+                    <li><a href="https://www.churchofjesuschrist.org/temples/details/aba-nigeria-temple?lang=eng" target="_blank">Aba Nigeria Temple</a></li>
+                    <li><a href="https://www.churchofjesuschrist.org/temples/details/atlanta-georgia-temple?lang=eng" target="_blank">Atlanta Georgia Temple</a></li>
+                    <li><a href="https://www.churchofjesuschrist.org/temples/details/austin-texas-temple?lang=eng" target="_blank">Austin Texas Temple</a></li>
+                </ul>
+            </main>
+
+            <aside class="box">
+                <h2>Lagos</h2>
+                <img src="images/lagos.jpg" alt="This is a picture of Lagos, Nigeria">
+                <p>Lagos is the city-state of Nigeria. With the most populationa in Africa and boasting the highest finances in the Country.</p>
+            </aside>
+        </div>
+
+        <footer>
+            <p>&copy; 🤞2021 Benson Arosam, 🤞 Lagos</p>
+        </footer>
+    </body>
+    <!-- Last modified: February, 2nd. 2024 -->
+</html>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+  background-color: steelblue;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+nav a {
+  display: block;
+  padding: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+header, .grid, footer {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  align-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+aside {
+  grid-column: 1;
+  grid-row: 1;
+}
+main {
+  margin: 1rem;
+  grid-column: 2/3;
+}
+
+
+h1 {
+  font-size: 50pt;
+  color: rgba(18, 60, 95, 0.728);
+  border-bottom: #020202 solid 5px;
+}
+
+
+main img {
+  width: 840px;
+  height: auto;
+  float: right;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+p {
+  padding: 10px;
+}
+header {
+  background-color: var(--primary-color);
+  padding: 10px;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    max-width: 960px;
+    padding: 20px;
+}
+
+main p {
+  clear: right;
+}
+
+aside {
+  width: 500px;
+  margin: 10px;
+  border: 10px solid rgb(71, 69, 60);
+  padding: 5px;
+  background-color: #020202;
+  color: #f0c632;
+  position: relative;
+}
+
+aside img {
+  width: 200px;
+  height: auto;
+}
+
+aside p {
+  font-style: italic;
+  font-family: sans-serif;
+  padding: 0;
+}
+
+aside h2 {
+  position: absolute;
+  top: 0px;
+  right: 200px;
+}
+p {
+    padding: 15px;
+    font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6{
+  color: var(--accent2-color);
+  font-family: var(--paragraph-font);
+}
+
+
+/* Class Selectors */
+
+.box {
+  margin: 1rem;
+  border: 1rem;
+  padding: 1rem;
+  
+}
+
+footer {
+  margin-top: 100px;
+  padding: 5px;
+  border-top: #D0ABA0;
+  text-align: center;
+  background-color: #D0ABA0;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap');
+:root {
+    --primary-color: #687351;
+    --secondary-color: #9ba17f;
+    --accent1-color: #e8e4db;
+    --accent2-color: #c9c1ae;
+
+    --heading-font: Serif;
+    --paragraph-font: open sans;
+
+    --nav-background-color: #191d32;
+    --nav-link-color: #e8e4db;
+    --nav-hover-link-color: #191d32;
+    --nav-hover-background-color: #e8e4db;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    max-width: 960px;
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
+}
+
+header {  
+    padding:20px;  
+    background-color: var(--accent1-color);
+}
+p {
+    padding: 25px;
+}
+h1 {
+
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>About Us | Arosam Benson</title>
+        <meta name="author" content="Benson">
+        <meta name="description" content="The about us page structured for rafting site plan">
+        <link href="styles/rafting.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <img src="images/logo1.png" alt="Logo of Rafting game"/>
+            <nav>
+                <a class="trip" href="index.html" target="_blank">index</a>
+                <a class="trip" href="about.html" target="_blank">about</a>
+                <a class="trip" href="trips.html" target="_blank">trips</a>
+                <a class="trip" href="contact.html" target="_blank">contact</a> 
+            </nav>
+        </header>
+
+        <main>
+            <div class="hero">
+                <img class="image1" src="images/hero_image.jpg" alt="A group of people on a river raft">
+
+                <h1>Sooyang Rafting Company</h1>
+                <img class="image2" src="images/raft4.jpg" alt="Group of people rowing boats"/>
+                <p class="para">Sooyang Company is dedicated to exploring the fun of water games. Starting about x years ago, we have dived to the sea more times than some of the aquatic creatures> Our motto is priotizing safety while enjoying the fullest.</p>
+
+            </div>
+
+            <section class="info">
+                <h2 class="title1">History</h2>
+                <p class="history">Sooyang was founded in x year by two brothers, Harry and Ronny. They were duped as the Wright brothers because of their amazing thought that led to this visionary exploration of the sea.</p>
+                <p class="history1">Because our field in this business has been preselected since the ninteens, we are able to show our credentials notwithstanding. Anyone who wants to see a good script should do well to ask for it, I will hand it over. I don't know what script.</p>
+            </section>
+
+            <section class="adventure">
+                <h2>Adventure Awaits You!</h2>
+                <figure>
+                    <img class="raft1" src="images/raft1.jpg" alt="Rafting image 1">
+                    <figcaption>Helmets at bay</figcaption>
+                </figure>
+                <figure>
+                    <img class="raft2" src="images/raft2.png" alt="Rafting image 2">
+                    <figcaption>Let the smile of sunset wash over you</figcaption>
+                </figure>
+                <figure>
+                    <img class="raft3" src="images/raft3.jpg" alt="Rafting image 3">
+                    <figcaption>Delivering waves to your fornt door</figcaption>
+                </figure>
+                <figure>
+                    <img class="raft4" src="images/raft4.jpg" alt="Rafting image 4">
+                    <figcaption>Happy rafting and roaring even in your fourties</figcaption>
+                </figure>
+                <figure>
+                    <img class="raft5" src="images/raft5.jpg" alt="Rafting image 5">
+                    <figcaption>Rafting to enjoy the little things of nature</figcaption>
+                </figure>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024, Sooyang, Benson</p>
+
+            <nav class="footerlinks">
+                <a href="https://wwww.facebook.com">
+                    <img src="images/facebook.jpeg" alt="facebook">
+                </a>
+
+                <a href="https://wwww.linkedin.com/in">
+                    <img src="images/linkedin.jpeg" alt="linkedin">
+                </a>
+
+                <a href="https://www.twitter.com">
+                    <img src="images/twitter.jpeg" alt="twitter">
+                </a>
+            </nav>
+        </footer>
+    </body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rafting Site Plan | Benson, Arosam</title>
+        <meta name="description" content="Rafting site plan. Demo work in partial fulfillment for the course, WDD 130. As a requirement for Software Engineering degree">
+        <meta name="author" content="Benson Arosam">
+        <link href="styles/site-plan-rafting.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <h1>Site Plan Rafting</h1>
+            <p>Author: Benson Arosam</p>
+        </header>
+
+        <main>
+            <h2>Overview</h2>
+            <h3>Purpose</h3>
+            <p>To create a demo site that captures the trills of rafting</p>
+            <h3>Audience</h3>
+            <p>This is intended for all water lovers, and those who feel water sports can be as exhilarating as 'golf'</p>
+
+            <h2>Branding</h2>
+            <h3>Website Logo</h3>
+            <img src="images/logo.png" alt="Rafting Site Logo">
+
+            <h2>Style Guide</h2>
+            <h3>Color Palette</h3>
+
+            <div color>
+                <p>Palette url: <a href="https://coolors.co/2d2d2a-b8336a-d0aba0-726da8-bee7e8" target="_blank">https://coolors.co/2d2d2a-b8336a-d0aba0-726da8-bee7e8</a> </p>
+                
+                <ul>
+                    <li>primary-color: D0ABAO</li>
+                    <li>secondary-color: BEE7E8</li>
+                    <li>accent1-color: 2D2D2A</li>
+                    <li>accent2-color: 726DA8</li>    
+                </ul>
+            </div>
+
+            <h3>Topography</h3>
+            <h4>Headings Example Font</h4>
+
+            <p>Saira, Sans, Roboto</p>
+
+            <h4>Colored Callout Example Font</h4>
+            <p></p>
+
+            <h3>Navigation</h3>
+
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Trips</a>
+                <a href="#">Contact Us</a>
+            </nav>
+
+            <h2>Wireframes</h2>
+
+            <h3>Home Page Wireframes</h3>
+            <img src="https://byui-cse.github.io/wdd130-ww-course/images/wwr/wwr-wireframe-home.png" alt="Home Page Wireframe Example Design" width="700">
+
+            <h3>About US Page Wireframe</h3>
+            <img src="https://byui-cse.github.io/wdd130-ww-course/images/wwr/wwr-wireframe-aboutus-update.png" alt="About Us Page Wireframe Design" width="700">
+        </main>
+
+        <footer>
+            <p>&copy; 👌Rafting Site Plan, Benson Arosam, WDD 130👌</p>
+        </footer>
+    </body>
+</html>
+
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
+:root {
+    --heading-font: serif;
+    --paragraph-font: sans-serif;
+    
+    --primary-color:  #86878a;
+    --secondary-color: #070503df;
+    --add-color1: #f5b39c;
+}
+
+* {
+    background-color: #DDD8C4;
+    box-sizing: border-box;
+}
+
+h1, h2, p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--secondary-color);
+}
+
+header {
+    display: grid;
+    background-color: #476b9ba3;
+    grid-template-columns: 1fr 6fr;
+    grid-gap: 0;
+}
+
+
+header nav {
+    font-size: 45px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* height: 90px; */
+
+    background-color: #476b9b07;
+    padding: 20px;
+    margin: 10px;
+    
+}
+
+.trip {
+    border: #86878a solid 2px;
+    margin: 1% 0;
+    padding: .5%;
+    text-align: left;
+    background-image: linear-gradient(to right, rgba(255,  255, 255, 0), #0a149ec4);
+    background-color: antiquewhite;
+}
+body {
+    max-width: 1500px;
+    position: absolute;
+}
+
+header img {
+    width: 150px;
+    box-shadow: #1b2030 0px 4px 10px 2px;
+}
+
+.info {
+    display: grid;
+    grid-gap: 50px;
+    /*background-color: lightgrey;*/
+    color: black;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: -1px;
+    word-break: break-word;
+    padding: 1em;
+
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.history {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.title1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    display: flex;
+    justify-content: center;
+}
+
+.history1 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0px;
+    grid-template-rows: 1fr 3fr;
+    /* border: #86878a solid 2px; */
+}
+
+figure img {
+    width: 100%;
+    height: 220px;
+}
+section h2 {
+    grid-column-start: 3;
+    grid-column-end: 6;
+}
+
+.image1 {
+    width: 100%;
+    display: block;
+    height: auto;
+    position: relative;
+    top: 0;
+    bottom: 0;
+}
+
+.image2 {
+    float: right;
+    width: 20%;
+}
+
+.para {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 2.0rem;
+}
+
+.image2 {
+    object-fit: contain;
+    position: absolute;
+    top: 400px;
+    right: 10px;
+}
+.hero {
+    position: relative;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 0px;
+    right: 0%;
+    font-size: 40px;
+    background-color: #deece78c;
+    margin: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.para {
+    position: absolute;
+    top: 400px;
+    right: 310px;
+    padding: 0px;
+    background-color: rgba(210, 220, 230, 0.53);
+}
+footer img {
+    width: 60px;
+    height: 60px;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+
+    border: gray solid 5px;
+    background-color: var(--add-color1);
+}
+
+footer p {
+    text-align: center;
+    font-size: 25px;
+    background-color: #f5b39c;
+}
+
+footer nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f5b39c;
+}
+
+footer nav img {
+    border: var(--secondary-color) solid 1.5px;
+    border-radius: 20%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
+:root {
+    --heading-font: serif;
+    --paragraph-font: sans-serif;
+    
+    --primary-color:  #86878a;
+    --secondary-color: #070503df;
+    --add-color1: #f5b39c;
+}
+
+* {
+    background-color: #DDD8C4;
+    box-sizing: border-box;
+}
+
+h1, h2, p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--secondary-color);
+}
+
+header {
+    display: grid;
+    background-color: #476b9ba3;
+    grid-template-columns: 1fr 6fr;
+    grid-gap: 0;
+}
+
+
+header nav {
+    font-size: 45px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* height: 90px; */
+
+    background-color: #476b9b07;
+    padding: 20px;
+    margin: 10px;
+    
+}
+
+.trip {
+    border: #86878a solid 2px;
+    margin: 1% 0;
+    padding: .5%;
+    text-align: left;
+    background-image: linear-gradient(to right, rgba(255,  255, 255, 0), #0a149ec4);
+    background-color: antiquewhite;
+}
+body {
+    max-width: 1500px;
+    position: absolute;
+}
+
+header img {
+    width: 150px;
+    box-shadow: #1b2030 0px 4px 10px 2px;
+}
+
+.info {
+    display: grid;
+    grid-gap: 50px;
+    /*background-color: lightgrey;*/
+    color: black;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: -1px;
+    word-break: break-word;
+    padding: 1em;
+
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.history {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.title1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    display: flex;
+    justify-content: center;
+}
+
+.history1 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0px;
+    grid-template-rows: 1fr 3fr;
+    /* border: #86878a solid 2px; */
+}
+
+figure img {
+    width: 100%;
+    height: 220px;
+}
+section h2 {
+    grid-column-start: 3;
+    grid-column-end: 6;
+}
+
+.image1 {
+    width: 100%;
+    display: block;
+    height: auto;
+    position: relative;
+    top: 0;
+    bottom: 0;
+}
+
+.image2 {
+    float: right;
+    width: 20%;
+}
+
+.para {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 2.0rem;
+}
+
+.image2 {
+    object-fit: contain;
+    position: absolute;
+    top: 400px;
+    right: 10px;
+}
+.hero {
+    position: relative;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 0px;
+    right: 0%;
+    font-size: 40px;
+    background-color: #deece78c;
+    margin: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.para {
+    position: absolute;
+    top: 400px;
+    right: 310px;
+    padding: 0px;
+    background-color: rgba(210, 220, 230, 0.53);
+}
+footer img {
+    width: 60px;
+    height: 60px;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+
+    border: gray solid 5px;
+    background-color: var(--add-color1);
+}
+
+footer p {
+    text-align: center;
+    font-size: 25px;
+    background-color: #f5b39c;
+}
+
+footer nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f5b39c;
+}
+
+footer nav img {
+    border: var(--secondary-color) solid 1.5px;
+    border-radius: 20%;
+}
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
+:root {
+  --primary-color: #D0ABA0;
+  --secondary-color: #BEE7E8;
+  --accent1-color: #2D2D2A;
+  --accent2-color: #1a127c;
+    
+  --heading-font: serif;
+  --paragraph-font: sans-serif;
+
+  --nav-background-color: #726DA8;
+  --nav-link-color:#2D2D2A;
+  --nav-hover-link-color: #D0ABA0;
+  --nav-hover-background-color:#D0ABA0;
+}
+
+header {
+  background-color: var(--primary-color);
+  padding: 10px;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    max-width: 960px;
+    padding: 20px;
+}
+
+p {
+    padding: 15px;
+}
+
+h1, h2, h3, h4, h5, h6{
+  color: var(--accent2-color);
+  font-family: var(--paragraph-font);
+}
+nav {
+    background-color: var(--nav-background-color);
+    font-size: 1.2rem;
+    display: flex;
+}
+
+nav a {
+    display: block;
+    color: var(--nav-link-color);
+    text-decoration: none;
+    padding: 1rem;
+}
+
+nav a:link, nav a:visited {
+    color: var(--nav-link-color);
+}
+
+nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+}
