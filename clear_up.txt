@@ -1,0 +1,3 @@
+#Function 1: Checking if c is lower
+
+def
